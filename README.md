@@ -1,6 +1,26 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/58b613f7-0ba5-4623-a379-a4abdb77d234/deploy-status)](https://app.netlify.com/sites/pilon/deploys)
 
-## Available Scripts
+# Pilon π
+
+The Pi learning game!
+
+Test your memory and learn as many digits of Pi as your heart desires! You'll never use them, but reciting Pi is a great party trick. Or so I've heard from people who don't spend all their free time developing Pi memory games and actually attend parties.
+
+**My project is live on Netlify!**
+
+And you can go play it [here](https://pilon.netlify.com)!
+
+## Motivation
+
+From elementary school through high school I loved memorizing random numbers like Pi and composing songs out of their many wonderful digits with my friends. At my peak I had a full 314 digits of Pi memorized! Unfortunately, I have since dropped digits... In celebration of Pi Day (3/14/2020) and in an effort to relearn the digits I have lost, I built this app to retrain my memory!
+
+From a technical standpoint, I wanted to use this as an opportunity to test `styled-components` integration with TypeScript as well as demonstrate for myself how well the React Context API replaces the need for Redux. This is also my first project leveraging Netlify.
+
+I may continue to add little features here in there, but the MVP game portion of the app is complete!
+
+## Development
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
@@ -27,18 +47,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### `yarn lint`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Lints the app with ESLint.

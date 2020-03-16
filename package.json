@@ -23,8 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "lint": "yarn eslint . --ext .ts,.tsx",
-    "eject": "react-scripts eject"
+    "lint": "yarn eslint . --ext .ts,.tsx"
   },
   "eslintConfig": {
     "extends": "react-app"
