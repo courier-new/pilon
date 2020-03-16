@@ -1,0 +1,22 @@
+# https://editorconfig.org/#download
+# Many editors have native support for EditorConfig, and most that don't have a plugin
+
+# No EditorConfig file above the root directory
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Set default charset
+charset = utf-8
+
+# 2 space indentation
+indent_style = space
+indent_size = 2
+
+# Trim trailing whitespace on lines except for files where it might be intentional
+trim_trailing_whitespace = true
+[*.{json,yml,md,eslintrc.js}]
+trim_trailing_whitespace = false
