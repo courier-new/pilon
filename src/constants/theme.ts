@@ -54,7 +54,6 @@ export const THEME_VARIABLES = {
   bodyFontSize: 'calc(10px + 2vh)',
   buttonFontSize: 'max(1.8vh, 14px)',
   fastTransition: '0.1s',
-  headerFont: `'Abril Fatface'`,
   inputFontSize: '14vh',
   inputHeight: '18vh',
   labelFontSize: '1.5vh',
