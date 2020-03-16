@@ -8,7 +8,7 @@ const HighScore: FC = () => {
   const { highScore } = useGameState();
   const { theme } = useThemeState();
 
-  return (
+  return highScore ? (
     <Label color={theme.colors.secondaryAccentColor}>
       Your high score is{' '}
       <span style={{ color: theme.colors.secondaryAccentColor, fontWeight: 'bold' }}>
@@ -16,7 +16,7 @@ const HighScore: FC = () => {
       </span>
       .
     </Label>
-  );
+  ) : null;
 };
 
 export default HighScore;
