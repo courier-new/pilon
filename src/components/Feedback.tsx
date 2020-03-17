@@ -39,6 +39,10 @@ const FeedbackBox = styled.div<StyledComponentThemeProp & { backgroundColor: str
   padding: ${getStyledComponentThemeProperty('blockPadding')};
   text-align: left;
   z-index: 2;
+
+  @media (max-width: 800px) {
+    font-size: ${getStyledComponentThemeProperty('mobileLabelFontSize')};
+  }
 `;
 
 const FeedbackCaret = styled.div<StyledComponentThemeProp & { backgroundColor: string }>`

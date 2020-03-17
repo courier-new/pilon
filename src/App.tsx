@@ -13,11 +13,21 @@ import RestartButton from './components/RestartButton';
 import { StyledComponentThemeProp } from './constants/theme';
 import ThemeToggle from './components/ThemeToggle';
 import styled from 'styled-components';
+import { useWindowSize } from './helpers/useWindowSize';
 
 const App: FC = () => (
   <CombinedProvider>
-    <Container>
-      <Background>
+    <AppContainer />
+  </CombinedProvider>
+);
+
+const AppContainer: FC = () => {
+  const { theme } = useThemeState();
+  const { height } = useWindowSize();
+
+  return (
+    <StyledContainer currentTheme={theme} windowHeight={height}>
+      <Background windowHeight={height}>
         <RecordedDigits />
       </Background>
       <StyledHeader />
@@ -34,20 +44,17 @@ const App: FC = () => (
         <ThemeToggle />
         <RestartButton />
       </StyledFooter>
-    </Container>
-  </CombinedProvider>
-);
-
-const Container: FC<PropsWithChildren<{}>> = ({ children }) => {
-  const { theme } = useThemeState();
-
-  return <StyledContainer currentTheme={theme}>{children}</StyledContainer>;
+    </StyledContainer>
+  );
 };
 
-const StyledContainer = styled.div<StyledComponentThemeProp>`
+type WindowHeightProp = { windowHeight?: number };
+const getWindowHeight = ({ windowHeight }: WindowHeightProp) => windowHeight + 'px' || '100vh';
+
+const StyledContainer = styled.div<StyledComponentThemeProp & WindowHeightProp>`
   text-align: center;
   background-color: ${getStyledComponentThemeProperty('backgroundColor')};
-  min-height: 100vh;
+  min-height: ${getWindowHeight};
   display: grid;
   grid-auto-rows: 1fr;
   grid-template-columns: 1fr 0fr 1fr;
@@ -56,15 +63,16 @@ const StyledContainer = styled.div<StyledComponentThemeProp>`
   color: ${getStyledComponentThemeProperty('textColor')};
   transition: background ${getStyledComponentThemeProperty('slowTransition')},
     color ${getStyledComponentThemeProperty('slowTransition')};
+  }
 
   * {
     font-family: ${getStyledComponentThemeProperty('bodyFont')};
   }
 `;
 
-const Background = styled.div`
+const Background = styled.div<WindowHeightProp>`
   position: absolute;
-  height: 100vh;
+  min-height: ${getWindowHeight};
   width: 100vw;
 `;
 

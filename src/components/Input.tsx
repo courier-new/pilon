@@ -7,12 +7,13 @@ import styled from 'styled-components';
 const StyledInput = styled.input<StyledComponentThemeProp>`
   background: ${getStyledComponentThemeProperty('textColor')};
   border: none;
-  border-bottom: 1.2vh solid ${getStyledComponentThemeProperty('borderColor')};
+  border-bottom: 14px solid ${getStyledComponentThemeProperty('borderColor')};
   caret-color: ${getStyledComponentThemeProperty('primaryAccentColor')};
   color: ${getStyledComponentThemeProperty('backgroundColor')};
   font-size: ${getStyledComponentThemeProperty('inputFontSize')};
   height: ${getStyledComponentThemeProperty('inputHeight')};
-  margin-bottom: 1.2vh;
+  margin-bottom: 14px;
+  max-width: 160px;
   text-align: center;
   transition: background ${getStyledComponentThemeProperty('fastTransition')},
     border ${getStyledComponentThemeProperty('fastTransition')};
@@ -20,6 +21,7 @@ const StyledInput = styled.input<StyledComponentThemeProp>`
   @media (max-width: 800px) {
     font-size: ${getStyledComponentThemeProperty('mobileInputFontSize')};
     height: ${getStyledComponentThemeProperty('mobileInputHeight')};
+    max-width: 180px;
   }
 
   &:focus {
@@ -51,12 +53,13 @@ const Input: FC<InputProps> = ({ onBlur, shouldCommitInput }) => {
 
   return (
     <StyledInput
-      ref={inputRef}
-      onChange={setInput}
+      currentTheme={theme}
+      inputMode="numeric"
       onBlur={onBlur}
+      onChange={setInput}
+      ref={inputRef}
       size={1}
       value={currentValue}
-      currentTheme={theme}
     />
   );
 };

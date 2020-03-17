@@ -46,21 +46,21 @@ export const LIGHT_THEME_COLORS: ThemeColors = {
 
 /** Other design system variables used within the app */
 export const THEME_VARIABLES = {
-  blockHorizontalPadding: '1.5vh',
-  blockMargin: '1vh',
-  blockPadding: '1vh 1.5vh',
-  blockVerticalPadding: '1vh',
+  blockHorizontalPadding: '15px',
+  blockMargin: '10px',
+  blockPadding: '10px 15px',
+  blockVerticalPadding: '10px',
   bodyFont: `'Baloo 2', cursive`,
-  bodyFontSize: 'calc(10px + 2vh)',
+  bodyFontSize: 'max(2.2vh, 20px)',
   buttonFontSize: 'max(1.8vh, 14px)',
   fastTransition: '0.1s',
-  inputFontSize: '14vh',
-  inputHeight: '18vh',
-  labelFontSize: '1.5vh',
-  mobileInputFontSize: '18vh',
-  mobileInputHeight: '23vh',
-  mobileLabelFontSize: '2vh',
-  noteFontSize: '2.5vh',
+  inputFontSize: '150px',
+  inputHeight: '200px',
+  labelFontSize: '14px',
+  mobileInputFontSize: '100px',
+  mobileInputHeight: '180px',
+  mobileLabelFontSize: '16px',
+  noteFontSize: '20px',
   slowTransition: '0.8s',
 };
 
