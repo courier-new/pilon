@@ -56,8 +56,8 @@ const StyledContainer = styled.div<StyledComponentThemeProp & WindowHeightProp>`
   background-color: ${getStyledComponentThemeProperty('backgroundColor')};
   min-height: ${getWindowHeight};
   display: grid;
-  grid-auto-rows: 1fr;
-  grid-template-columns: 1fr 0fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1.2fr;
   grid-gap: 2vmin;
   font-size: ${getStyledComponentThemeProperty('bodyFontSize')};
   color: ${getStyledComponentThemeProperty('textColor')};
