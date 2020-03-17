@@ -55,6 +55,8 @@ const Input: FC<InputProps> = ({ onBlur, shouldCommitInput }) => {
     <StyledInput
       currentTheme={theme}
       inputMode="numeric"
+      id="pi digit"
+      name="pi digit"
       onBlur={onBlur}
       onChange={setInput}
       ref={inputRef}

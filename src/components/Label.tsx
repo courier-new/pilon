@@ -17,7 +17,7 @@ const Label: FC<React.ButtonHTMLAttributes<HTMLLabelElement>> = ({ children, ...
   const { theme } = useThemeState();
 
   return (
-    <StyledLabel currentTheme={theme} {...props}>
+    <StyledLabel currentTheme={theme} htmlFor="pi digit" {...props}>
       {children}
     </StyledLabel>
   );
